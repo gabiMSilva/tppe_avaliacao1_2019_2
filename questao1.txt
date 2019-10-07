@@ -1,0 +1,19 @@
+ a) Interface pública é uma interface que pode ser usada para outras instâncias e classes dentro de um mesmo projeto, 
+	já uma interface publicada é uma interface que pode estar sendo consumida por outros projetos e, por isso não 
+	pode ser modificada diretamente. Nesse caso, a melhor solução é manter ambas as versões até que todos os usuários 
+	façam a migração.
+ 
+ b) O mau cheiro "Mudanças Divergentes" ocorre quando a modificação em uma classe tem reflexos em outros métodos e 
+  	atributos dentro dessa classe, gerando várias mudanças. O que pode significar que a classe está sobrecarregada 
+  	ou com alto nível de acoplamento.
+  	
+  	Já a Cirurgia com rifle acontece quando uma modificação gera necessidade de mudança em outras classes, o que 
+  	aumenta o risco de uma modificação necessária ser deixada de lado. Isso pode ser causado pela falta de coesão 
+  	do projeto, e pode ser resolvido importando atributos e classes que são responsabilidade dela.
+  	
+ c) Falso. Nem toda refatoração irá otimizar o desempenho da aplicação. A operação Extrair Método, por 
+ 	exemplo, pode gerar uma piora no desempenho por aumentar a quantidade de chamadas de funções, apesar de melhorar a 
+ 	legibilidade do código dentre outras vantagens.
+ 	
+ d) Uma refatoração pode ser considerada realizada com sucesso quando todos os testes anteriores continuam relatando 
+ 	sucesso em seu resultado, além da não alteração comportamental da aplicação.
